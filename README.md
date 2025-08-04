@@ -11,7 +11,7 @@ Odată autentificat, poate:
 Un admin poate adăuga sau edita cărți.
 <br><br>
 
-<h2>📚 Lecția 1: Introducere în Java + Git & GitHub</h2>
+<h2>📚 Tema 1: Introducere în Java + Git & GitHub</h2>
 
 <h3>Temă:</h3>
 <ul>
@@ -28,7 +28,7 @@ Un admin poate adăuga sau edita cărți.
   <li>Fă commituri frecvente și dă push codului pe Git la final.</li>
 </ul>
 
-<h2>📚 Lecția 2: Moștenire, Abstractizare, Polimorfism & Layered Architecture</h2>
+<h2>📚 Tema 2: Moștenire, Abstractizare, Polimorfism & Layered Architecture</h2>
 
 <h3>Temă:</h3>
 <ul>
