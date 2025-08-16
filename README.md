@@ -73,3 +73,42 @@ Un admin poate adăuga sau edita cărți.
 
   <li>Fă commituri frecvente și dă push la final pe GitHub.</li>
 </ul>
+<h2>📚 Tema 3: Baze de Date și JDBC</h2>
+
+<h3>Temă:</h3>
+<ul>
+  <li>Creează baza de date <code>biblioteca</code> în MySQL și tabelele:
+    <ul>
+      <li><code>utilizatori</code> – cu coloane <code>id</code> (PK, AUTO_INCREMENT), <code>nume</code>, <code>email</code>, <code>parola</code></li>
+      <li><code>carti</code> – cu coloane <code>id</code> (PK, AUTO_INCREMENT), <code>titlu</code>, <code>autor</code>, <code>disponibila</code> (BOOLEAN)</li>
+    </ul>
+  </li>
+
+  <li>Creează clasele <code>JdbcCarteRepository</code> și <code>JdbcUtilizatorRepository</code>, care implementează <code>IRepository&lt;T&gt;</code> și folosesc JDBC pentru a accesa baza de date.</li>
+
+  <li>Actualizează serviciile:
+    <ul>
+      <li><code>UtilizatorService</code> – să folosească <code>JdbcUtilizatorRepository</code></li>
+      <li><code>CarteService</code> – să folosească <code>JdbcCarteRepository</code></li>
+    </ul>
+  </li>
+
+  <li>Scrie teste unitare JUnit pentru a valida metodele repository-urilor:
+    <ul>
+      <li><code>save()</code></li>
+      <li><code>delete()</code></li>
+      <li><code>findById()</code></li>
+      <li><code>findAll()</code></li>
+    </ul>
+  </li>
+
+  <li>Rulează aplicația și verifică:
+    <ul>
+      <li>Că utilizatorul se poate înregistra</li>
+      <li>Că utilizatorul poate împrumuta și returna cărți</li>
+      <li>Că datele sunt salvate corect în MySQL</li>
+    </ul>
+  </li>
+
+  <li>Fă commituri frecvente și dă push la final pe GitHub.</li>
+</ul>
