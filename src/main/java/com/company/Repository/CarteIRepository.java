@@ -1,4 +1,4 @@
-package com.company.repository;
+package com.company.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
