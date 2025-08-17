@@ -1,9 +1,12 @@
+package com.company.repository;
+
 import java.util.ArrayList;
 import java.util.List;
-public class CarteRepository implements Repository<Carte> {
+
+public class CarteIRepository implements IRepository<Carte> {
     private List<Carte> carti;
 
-    public CarteRepository() {
+    public CarteIRepository() {
         this.carti = new ArrayList<>();
         ;
     }
@@ -33,5 +36,6 @@ public class CarteRepository implements Repository<Carte> {
         return null;
 
     }
+}
 
 

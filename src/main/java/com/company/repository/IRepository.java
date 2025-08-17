@@ -1,5 +1,7 @@
+package com.company.repository;
+
 import java.util.List;
-public interface Repository<T>{
+public interface IRepository<T>{
    public void save(T entity);
    public void delete(T entity);
    public T findById(int id);

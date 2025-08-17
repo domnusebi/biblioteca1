@@ -1,9 +1,11 @@
+package com.company.repository;
+
 import java.util.ArrayList;
 import java.util.List;
-public class UtilizatorRepository implements Repository<Utilizator> {
+public class UtilizatorIRepository implements IRepository<Utilizator> {
     private List<Utilizator> utilizatori;
 
-    public UtilizatorRepository() {
+    public UtilizatorIRepository() {
         this.utilizatori = new ArrayList<>();
     }
 

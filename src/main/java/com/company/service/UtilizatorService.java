@@ -1,3 +1,5 @@
+package com.company.service;
+
 public class UtilizatorService {
     private UtilizatorRepository utilizatorRepository;
 
