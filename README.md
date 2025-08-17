@@ -73,7 +73,7 @@ Un admin poate adăuga sau edita cărți.
 
   <li>Fă commituri frecvente și dă push la final pe GitHub.</li>
 </ul>
-<h2>📚 Tema 3: Baze de Date și JDBC</h2>
+<h2>📚 Lecția 3: Baze de Date și JDBC</h2>
 
 <h3>Temă:</h3>
 <ul>
