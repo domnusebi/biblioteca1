@@ -112,3 +112,63 @@ Un admin poate adăuga sau edita cărți.
 
   <li>Fă commituri frecvente și dă push la final pe GitHub.</li>
 </ul>
+<h2>📚 Lecția 4: Validări, Excepții, Logger (Log4j) și Criptarea Parolelor</h2>
+
+<h3>Temă:</h3>
+<ul>
+  <li>Creează interfața generică <code>IValidator&lt;T&gt;</code> cu o metodă de validare.
+  <ul><li><code>void validate(T entity) throws ValidationException</code></li></ul>
+  </li>
+
+  <li>Creează clasele de validare:
+    <ul>
+      <li><code>UtilizatorValidator</code> – verifică: numele nu este gol, email-ul respectă formatul standard, parola are cel puțin 6 caractere.</li>
+      <li><code>CarteValidator</code> – verifică: titlul și autorul nu sunt goale.</li>
+    </ul>
+  </li>
+
+  <li>Creează o clasă de excepție <code>ValidationException</code> pentru erori de validare.</li>
+
+  <li>Modifică metodele din <code>UtilizatorService</code> și <code>CarteService</code> astfel încât:
+    <ul>
+      <li>Să folosească validatorii pentru a valida obiectele înainte de a le salva/folosi.</li>
+      <li>Să arunce <code>ValidationException</code> dacă datele sunt invalide.</li>
+    </ul>
+  </li>
+
+  <li>În <code>Main</code>, prinde excepțiile și afișează mesaje corespunzătoare.</li>
+
+  <li>Adaugă în proiect suport pentru <b>Log4j 2</b>:
+    <ul>
+      <li>Creează un fișier de configurare <code>log4j2.xml</code> pentru loguri în consolă și fișier.</li>
+      <li>În <code>UtilizatorService</code> și <code>CarteService</code> loghează evenimente:
+        <ul>
+          <li><b>INFO</b>: pentru evenimente normale (înregistrare reușită, împrumut carte).</li>
+          <li><b>ERROR</b>: pentru date invalide (email greșit, carte indisponibilă).</li>
+          <li><b>FATAL</b>: pentru erori neașteptate (de ex. conexiunea la baza de date pică).</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <li>Creează clasa <code>PasswordUtils</code> cu metode pentru criptarea și decriptarea parolelor.</li>
+
+  <li>Actualizează repository-urile și serviciile:
+    <ul>
+      <li>În <code>JdbcUtilizatorRepository</code>, criptează parola înainte să fie salvată în baza de date.</li>
+      <li>În <code>UtilizatorService.login</code>, criptează parola introdusă și compar-o cu cea din baza de date.</li>
+    </ul>
+  </li>
+
+  <li>Scrie un program de test în <code>Main</code> care să simuleze:
+    <ul>
+      <li>Înregistrarea unui utilizator cu email invalid → să apară <code>ValidationException</code> și să fie logată o eroare.</li>
+      <li>Înregistrarea unui utilizator valid → parola trebuie salvată criptată, log INFO.</li>
+      <li>Autentificarea unui utilizator → să funcționeze doar cu parola corectă.</li>
+      <li>Autentificarea cu parolă greșită → mesaj de eroare în consolă.</li>
+      <li>Împrumutarea unei cărți indisponibile → logger-ul să afișeze mesaj de tip ERROR.</li>
+    </ul>
+  </li>
+
+  <li>Fă commituri frecvente și dă push la final pe GitHub.</li>
+</ul>
